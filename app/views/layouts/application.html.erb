@@ -5,6 +5,7 @@
     <title><%= content_for?(:title) ? yield(:title) : "Cfinery" %></title>
     <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Cfinery" %>">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+      <link rel="stylesheet" href="animate.min.css">
       <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
       <%= csrf_meta_tags %>
       <!-- Custom Fonts -->

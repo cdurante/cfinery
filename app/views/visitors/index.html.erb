@@ -27,8 +27,8 @@
 <!-- Header -->
 <header id="top" class="header">
     <div class="text-vertical-center portfolio-name">
-        <h1>Catherine Finedore</h1>
-        <h2>cFinery Portfolio</h2>
+        <h1 class="animated bounce">Catherine Finedore</h1>
+        <h2>DESIGN PORTFOLIO</h2>
         <br>
         <a href="#about" class="btn btn-light btn-lg">About Me</a>
     </div>
@@ -98,11 +98,10 @@
                 <h2>My Work</h2>
                 <hr class="small">
                 <div class="row">
-                  <% @portfolio_items.each do %>
+                  <% @portfolio_items.each do |portfolio_item| %>
                     <div class="col-md-6">
                         <div class="portfolio-item">
-                            <a href="#">
-                                <img class="img-portfolio img-responsive" src="">
+                              <%= link_to image_tag(portfolio_item.thumbnail.url, height: '500', width: '333', class: "img-portfolio img-responsive"), portfolio_item %>
                             </a>
                         </div>
                     </div>

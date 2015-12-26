@@ -10,6 +10,7 @@ class PortfolioItemsController < ApplicationController
   # GET /portfolio_items/1
   # GET /portfolio_items/1.json
   def show
+    debugger
   end
 
   # GET /portfolio_items/new
@@ -69,6 +70,6 @@ class PortfolioItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def portfolio_item_params
-      params.require(:portfolio_item).permit(:name, :description, :thumbnail, :timestamps, {avatars: []})
+      params.require(:portfolio_item).permit(:name, :description, :thumbnail, :timestamps, {photos: []})
     end
 end
